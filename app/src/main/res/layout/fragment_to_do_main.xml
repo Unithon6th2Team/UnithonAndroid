@@ -210,22 +210,14 @@
                         android:text="26"
                         android:textSize="16sp" />
                 </RelativeLayout>
-
             </FrameLayout>
-
         </LinearLayout>
-
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/to_do_main_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/to_do_list_beyond"/>
-
-    <FrameLayout
-        android:id="@+id/child_fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/to_do_list_beyond" />
+        android:layout_below="@+id/to_do_list_beyond" />
 
 </RelativeLayout>

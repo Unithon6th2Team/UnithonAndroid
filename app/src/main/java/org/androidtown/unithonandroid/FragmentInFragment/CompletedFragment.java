@@ -15,7 +15,7 @@ import org.androidtown.unithonandroid.R;
 
 import java.util.ArrayList;
 
-public class CompletedFragment extends Fragment implements View.OnClickListener{
+public class CompletedFragment extends Fragment implements View.OnClickListener {
 
     private RecyclerView completedView;
 
@@ -23,9 +23,10 @@ public class CompletedFragment extends Fragment implements View.OnClickListener{
     private ArrayList<ToDoData> completedList;
 
 
-    public static CompletedFragment newInstance(){
+    public static CompletedFragment newInstance() {
         return new CompletedFragment();
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +35,10 @@ public class CompletedFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_to_do, container, false);
         initialize(view);
-
         return view;
     }
 
-    private void initialize(View view){
+    private void initialize(View view) {
         completedView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // ... 추가해야함
@@ -53,7 +53,7 @@ public class CompletedFragment extends Fragment implements View.OnClickListener{
 
     }
 
-    private void refreshData(){
+    private void refreshData() {
         completedView.setAdapter(new ToDoAdapter(getContext(), completedList));
 
     }

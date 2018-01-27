@@ -9,29 +9,40 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import org.androidtown.unithonandroid.Data.ApiResBody;
 import org.androidtown.unithonandroid.Data.ToDoData;
 import org.androidtown.unithonandroid.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by YTW on 2018. 1. 28..
  */
 
-public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.ViewHolder>{
-    private ArrayList<ToDoData> completedList = new ArrayList<ToDoData>();
+public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.ViewHolder> {
+    private ArrayList<ApiResBody> completedList = new ArrayList<ApiResBody>();
     private Context context;
 
-    public CompletedAdapter(Context context, ArrayList<ToDoData> completedList) {
-
+    public CompletedAdapter(Context context) {
         this.context = context;
-        this.completedList = completedList;
     }
 
+    public void AddAllItem(ApiResBody[] apiResBodies) {
+        Collections.addAll(completedList, apiResBodies);
+        notifyDataSetChanged();
+    }
+
+    public void AddItem(ApiResBody apiResBody) {
+        completedList.add(apiResBody);
+        notifyDataSetChanged();
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo, parent, false);
+        View view = LayoutInflater
+                .from(parent.getContext())
+                .inflate(R.layout.item_todo, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -39,25 +50,11 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final ToDoData todo = completedList.get(position);
+        final ApiResBody todo = completedList.get(position);
 
-        if(todo != null){
-
-            switch (todo.getOid()){
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-            }
-            holder.tvDayNum.setText(todo.getDayNum());
-            holder.tvDayChar.setText(todo.getDayChar());
-            holder.tvContents.setText(todo.getContents());
+        if (todo != null) {
+            holder.tvDayNum.setText(todo.getDate());
+            holder.tvContents.setText(todo.getContent());
             holder.tvReward.setText(todo.getReward());
         }
     }
@@ -68,29 +65,27 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
     }
 
 
-
-
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder {
         //
         ImageButton owner, target1, target2, target3;
         TextView tvContents, tvReward, tvDayNum, tvDayChar;
+
         public ViewHolder(View itemView) {
 
             super(itemView);
 
-            owner = (ImageButton)itemView.findViewById(R.id.imgBtn_owner);
+            owner = (ImageButton) itemView.findViewById(R.id.imgBtn_owner);
 
-            tvContents = (TextView)itemView.findViewById(R.id.tv_contents);
+            tvContents = (TextView) itemView.findViewById(R.id.tv_contents);
             tvContents.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
-            tvReward = (TextView)itemView.findViewById(R.id.tv_reward);
+            tvReward = (TextView) itemView.findViewById(R.id.tv_reward);
             tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
-            tvDayNum = (TextView)itemView.findViewById(R.id.tv_day_num);
+            tvDayNum = (TextView) itemView.findViewById(R.id.tv_day_num);
             tvDayNum.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "HurmeGeometricSans1.otf"));
-            tvDayChar = (TextView)itemView.findViewById(R.id.tv_day_char);
+            tvDayChar = (TextView) itemView.findViewById(R.id.tv_day_char);
             tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
 
         }
-
 
 
     }

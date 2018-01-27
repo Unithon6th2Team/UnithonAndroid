@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context="org.androidtown.unithonandroid.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/main_todo_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,45 +23,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/title_home"
             android:background="?android:attr/selectableItemBackground"
-            />
+            android:text="@string/title_home" />
 
         <Button
             android:id="@+id/btn_to_do"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/title_to_do_list"
             android:background="?android:attr/selectableItemBackground"
-            />
+            android:text="@string/title_to_do_list" />
 
         <Button
             android:id="@+id/btn_chatting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/title_chatting"
             android:background="?android:attr/selectableItemBackground"
-            />
+            android:text="@string/title_chatting" />
 
         <Button
             android:id="@+id/btn_album"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/title_album"
             android:background="?android:attr/selectableItemBackground"
-            />
+            android:text="@string/title_album" />
 
         <Button
             android:id="@+id/btn_notification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/title_notification"
             android:background="?android:attr/selectableItemBackground"
-            />
+            android:text="@string/title_notification" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

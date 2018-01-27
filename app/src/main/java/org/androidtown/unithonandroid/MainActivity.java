@@ -1,11 +1,15 @@
 package org.androidtown.unithonandroid;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import org.androidtown.unithonandroid.Fragment.ToDoMainFragment;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnHome, btnToDo, btnChatiing, btnAlbum, btnNotification;
 
 
@@ -19,16 +23,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void initialize(){
-        btnHome = (Button)findViewById(R.id.btn_home);
-        btnToDo = (Button)findViewById(R.id.btn_to_do);
-        btnChatiing = (Button)findViewById(R.id.btn_chatting);
-        btnAlbum = (Button)findViewById(R.id.btn_album);
-        btnNotification = (Button)findViewById(R.id.btn_notification);
+    private void initialize() {
+        btnHome = findViewById(R.id.btn_home);
+        btnToDo = findViewById(R.id.btn_to_do);
+        btnChatiing = findViewById(R.id.btn_chatting);
+        btnAlbum = findViewById(R.id.btn_album);
+        btnNotification = findViewById(R.id.btn_notification);
 
     }
 
-    private void setUpListener(){
+    private void setUpListener() {
         btnHome.setOnClickListener(this);
         btnToDo.setOnClickListener(this);
         btnChatiing.setOnClickListener(this);
@@ -37,32 +41,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void onClick(View v){
-        switch (v.getId()){
-            case R.id.btn_home :
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_home:
 
                 break;
 
-            case R.id.btn_to_do :
+            case R.id.btn_to_do:
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                ToDoMainFragment toDoMainFragment = new ToDoMainFragment();
+                fragmentTransaction.add(R.id.main_todo_frame, toDoMainFragment);
+                fragmentTransaction.commit();
 
                 break;
 
-            case R.id.btn_chatting :
+            case R.id.btn_chatting:
 
                 break;
 
-            case R.id.btn_album :
+            case R.id.btn_album:
 
                 break;
 
-            case R.id.btn_notification :
+            case R.id.btn_notification:
 
                 break;
         }
     }
-
-
-
-
-
 }
