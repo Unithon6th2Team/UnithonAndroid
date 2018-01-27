@@ -5,4 +5,5 @@
     <string name="title_notification">알림</string>
     <string name="title_to_do_list">할 일</string>
     <string name="title_album">앨범</string>
+    <string name="title_activity_detail_to_do">DetailToDoActivity</string>
 </resources>
