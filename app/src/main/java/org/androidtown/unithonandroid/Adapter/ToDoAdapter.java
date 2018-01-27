@@ -82,13 +82,13 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
             owner = (ImageButton)itemView.findViewById(R.id.imgBtn_owner);
 
             tvContents = (TextView)itemView.findViewById(R.id.tv_contents);
-            tvContents.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
+            tvContents.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "yoongothic740.ttf"));
             tvReward = (TextView)itemView.findViewById(R.id.tv_reward);
-            tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
+            tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "yoongothic740.ttf"));
             tvDayNum = (TextView)itemView.findViewById(R.id.tv_day_num);
             tvDayNum.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "HurmeGeometricSans1.otf"));
             tvDayChar = (TextView)itemView.findViewById(R.id.tv_day_char);
-            tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "YoonGothic740.ttf"));
+            tvReward.setTypeface(Typeface.createFromAsset(itemView.getContext().getAssets(), "yoongothic740.ttf"));
 
         }
 
