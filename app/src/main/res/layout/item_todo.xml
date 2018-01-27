@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="106dp"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,23 +19,23 @@
             android:orientation="vertical">
 
             <TextView
-
                 android:id="@+id/tv_day_num"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="23dp"
+                android:layout_height="26dp"
                 android:layout_marginLeft="18dp"
                 android:layout_marginTop="29dp"
                 android:text="19"
-                android:textColor="@android:color/black"
+                android:letterSpacing="-2.0"
                 android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/tv_day_char"
-                android:layout_width="wrap_content"
+                android:layout_width="42dp"
                 android:layout_height="14dp"
                 android:layout_marginBottom="29dp"
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="16dp"
+                android:letterSpacing="-0.4"
                 android:text="오늘(목)"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -58,6 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:letterSpacing="-0.5"
                     android:text="분리수거하기"
                     android:textSize="14sp" />
 
@@ -107,6 +108,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:letterSpacing="-0.2"
                     android:text="용돈 1000원"
                     android:textSize="10sp" />
 
