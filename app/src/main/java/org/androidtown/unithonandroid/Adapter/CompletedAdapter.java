@@ -13,6 +13,7 @@ import org.androidtown.unithonandroid.Data.ApiResBody;
 import org.androidtown.unithonandroid.Data.ToDoData;
 import org.androidtown.unithonandroid.R;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -53,9 +54,14 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
         final ApiResBody todo = completedList.get(position);
 
         if (todo != null) {
-            holder.tvDayNum.setText(todo.getDate());
-            holder.tvContents.setText(todo.getContent());
-            holder.tvReward.setText(todo.getReward());
+            try {
+                holder.tvDayNum.setText(todo.getDate());
+                holder.tvDayChar.setText(todo.getDayChars());
+                holder.tvContents.setText(todo.getContent());
+                holder.tvReward.setText(todo.getReward());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
     }
 
