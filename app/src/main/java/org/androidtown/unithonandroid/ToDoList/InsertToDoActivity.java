@@ -5,12 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.androidtown.unithonandroid.R;
 
-public class InsertToDoActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.GregorianCalendar;
 
+public class InsertToDoActivity extends AppCompatActivity implements View.OnClickListener {
+    private int year, month, day, hour, min;
     private EditText editContents, editDate, editPlace, editReward;
+    private TextView tvStartDate, tvStartTime, tvEndDate, tvEndTime;
     private Button btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +30,14 @@ public class InsertToDoActivity extends AppCompatActivity implements View.OnClic
         editDate = (EditText)findViewById(R.id.edit_date);
         editPlace = (EditText)findViewById(R.id.edit_place);
         editReward = (EditText)findViewById(R.id.edit_reward);
-        btnSave = (Button)findViewById(R.id.btn_save);
+
+        GregorianCalendar calendar = new GregorianCalendar();
+        year = calendar.get(calendar.YEAR);
+        month = calendar.get(calendar.MONTH);
+        day= calendar.get(calendar.DAY_OF_MONTH);
+        hour = calendar.get(calendar.HOUR_OF_DAY);
+        min = calendar.get(calendar.MINUTE);
+
     }
 
     private void setUpListener(){
@@ -44,8 +55,7 @@ public class InsertToDoActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.edit_reward :
                 break;
-            case R.id.btn_save:
-                break;
+
         }
     }
 }
