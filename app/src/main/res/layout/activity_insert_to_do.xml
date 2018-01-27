@@ -6,10 +6,50 @@
     android:layout_height="match_parent"
     tools:context="org.androidtown.unithonandroid.ToDoList.InsertToDoActivity">
 
+    <FrameLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#fce64c">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="18.2dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_write_x" />
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="126dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/image_write_title" />
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="314dp"
+                android:letterSpacing="-0.01"
+                android:textSize="15sp"
+                tools:text="등록" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
     <LinearLayout
         android:id="@+id/insert_to_do_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_below="@+id/titlebar"
         android:orientation="horizontal">
 
         <TextView
