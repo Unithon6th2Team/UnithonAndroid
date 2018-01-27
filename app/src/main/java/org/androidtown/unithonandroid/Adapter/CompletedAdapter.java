@@ -15,18 +15,17 @@ import org.androidtown.unithonandroid.R;
 import java.util.ArrayList;
 
 /**
- * Created by YTW on 2018. 1. 27..
+ * Created by YTW on 2018. 1. 28..
  */
 
-public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
-
-    private ArrayList<ToDoData> todoList = new ArrayList<ToDoData>();
+public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.ViewHolder>{
+    private ArrayList<ToDoData> completedList = new ArrayList<ToDoData>();
     private Context context;
 
-    public ToDoAdapter(Context context, ArrayList<ToDoData> toDoList) {
+    public CompletedAdapter(Context context, ArrayList<ToDoData> completedList) {
 
         this.context = context;
-        this.todoList = toDoList;
+        this.completedList = completedList;
     }
 
 
@@ -40,7 +39,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final ToDoData todo = todoList.get(position);
+        final ToDoData todo = completedList.get(position);
 
         if(todo != null){
 
@@ -65,7 +64,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return todoList.size();
+        return completedList.size();
     }
 
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.androidtown.unithonandroid.ToDoList.ToDoListActivity">
+    tools:context="org.androidtown.unithonandroid.FragmentInFragment.ToDoFragment">
 
     <LinearLayout
         android:id="@+id/to_do_list_beyond"
