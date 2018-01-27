@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+
+        <FrameLayout
+            android:layout_width="28dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom"
+            android:background="#FF5722">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="-0.01"
+                android:textColor="@android:color/white"
+                android:textSize="7sp"
+                android:text="담당" />
+        </FrameLayout>
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

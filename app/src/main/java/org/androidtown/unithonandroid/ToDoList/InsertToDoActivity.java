@@ -36,13 +36,13 @@ public class InsertToDoActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.edit_Contents :
+            case R.id.edit_contents :
                 break;
-            case R.id.edit_Date :
+            case R.id.edit_date :
                 break;
-            case R.id.edit_Place :
+            case R.id.edit_place :
                 break;
-            case R.id.edit_Reward :
+            case R.id.edit_reward :
                 break;
             case R.id.btn_save:
                 break;

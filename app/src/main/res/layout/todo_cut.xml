@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.company.yyj.uuubfdx.MainActivity">
+
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+
+        <FrameLayout
+            android:layout_width="28dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom"
+            android:background="#BDBDBD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="-0.01"
+                android:textColor="@android:color/white"
+                android:textSize="7sp"
+                tools:text="게시" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            />
+
+        <FrameLayout
+            android:layout_width="28dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom"
+            android:background="#FF5722">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="-0.01"
+                android:textColor="@android:color/white"
+                android:textSize="7sp"
+                tools:text="담당" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

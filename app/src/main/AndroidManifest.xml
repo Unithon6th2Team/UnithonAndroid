@@ -23,6 +23,7 @@
             android:name=".ToDoList.DetailToDoActivity"
             android:label="@string/title_activity_detail_to_do"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ToDoList.ToDoListActivity"></activity>
     </application>
 
 </manifest>
