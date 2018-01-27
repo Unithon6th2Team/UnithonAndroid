@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">UnithonAndroid</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">홈</string>
+    <string name="title_chatting">채팅</string>
+    <string name="title_notification">알림</string>
+    <string name="title_to_do_list">할 일</string>
+    <string name="title_album">앨범</string>
 </resources>

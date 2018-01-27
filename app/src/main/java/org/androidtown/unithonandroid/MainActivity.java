@@ -1,44 +1,68 @@
 package org.androidtown.unithonandroid;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private Button btnHome, btnToDo, btnChatiing, btnAlbum, btnNotification;
 
-    private TextView mTextMessage;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        initialize();
+        setUpListener();
+
     }
+
+    private void initialize(){
+        btnHome = (Button)findViewById(R.id.btn_home);
+        btnToDo = (Button)findViewById(R.id.btn_to_do);
+        btnChatiing = (Button)findViewById(R.id.btn_chatting);
+        btnAlbum = (Button)findViewById(R.id.btn_album);
+        btnNotification = (Button)findViewById(R.id.btn_notification);
+
+    }
+
+    private void setUpListener(){
+        btnHome.setOnClickListener(this);
+        btnToDo.setOnClickListener(this);
+        btnChatiing.setOnClickListener(this);
+        btnAlbum.setOnClickListener(this);
+        btnNotification.setOnClickListener(this);
+
+    }
+
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.btn_home :
+
+                break;
+
+            case R.id.btn_to_do :
+
+                break;
+
+            case R.id.btn_chatting :
+
+                break;
+
+            case R.id.btn_album :
+
+                break;
+
+            case R.id.btn_notification :
+
+                break;
+        }
+    }
+
+
+
+
 
 }
