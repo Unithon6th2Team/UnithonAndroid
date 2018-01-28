@@ -132,6 +132,15 @@
                     android:layout_weight="1"
                     android:src="#E6E6E6" />
 
+                <ImageButton
+                    android:id="@+id/imgBtn_target"
+                    android:layout_width="36dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@mipmap/ic_launcher" />
+
+
             </LinearLayout>
 
         </LinearLayout>

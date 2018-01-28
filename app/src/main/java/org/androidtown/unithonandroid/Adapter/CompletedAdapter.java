@@ -9,12 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import org.androidtown.unithonandroid.Data.ApiResBody;
+import org.androidtown.unithonandroid.MyApplication;
 import org.androidtown.unithonandroid.R;
 
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
+
+import javax.microedition.khronos.opengles.GL;
 
 /**
  * Created by YTW on 2018. 1. 28..
@@ -58,6 +63,15 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
                 holder.tvDayChar.setText(todo.getDayChars());
                 holder.tvContents.setText(todo.getContent());
                 holder.tvReward.setText(todo.getReward());
+
+                Glide.with(context)
+                        .load(MyApplication.Did2ImgSrc(todo.getOwner_id()))
+                        .into(holder.owner);
+
+                Glide.with(context)
+                        .load(MyApplication.Did2ImgSrc(todo.getTarget_id()))
+                        .into(holder.imgBtn_target);
+
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -72,7 +86,7 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
 
     class ViewHolder extends RecyclerView.ViewHolder {
         //
-        ImageButton owner, target1, target2, target3;
+        ImageButton owner, target1, target2, target3, imgBtn_target;
         TextView tvContents, tvReward, tvDayNum, tvDayChar;
 
         public ViewHolder(View itemView) {
@@ -85,6 +99,7 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
             tvReward = (TextView) itemView.findViewById(R.id.tv_reward);
             tvDayNum = (TextView) itemView.findViewById(R.id.tv_day_num);
             tvDayChar = (TextView) itemView.findViewById(R.id.tv_day_char);
+            imgBtn_target = itemView.findViewById(R.id.imgBtn_target);
         }
     }
 }
