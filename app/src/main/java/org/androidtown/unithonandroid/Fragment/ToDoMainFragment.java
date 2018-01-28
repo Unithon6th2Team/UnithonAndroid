@@ -56,10 +56,10 @@ public class ToDoMainFragment extends Fragment implements View.OnClickListener {
 
     public void setUserVisibleHint(boolean isVisibleToUser) {
         if (isVisibleToUser) {
-            for (int i = 0; i < tab.size(); ){
+            for (int i = 0; i < tab.size(); ) {
                 tab.remove(0).setImageResource(resId.remove(0));
             }
-            for (int i = 0; i < under.size(); ){
+            for (int i = 0; i < under.size(); ) {
                 int[] rgb = color.remove(0);
                 under.remove(0).setBackgroundColor(Color.rgb(rgb[0], rgb[1], rgb[2]));
             }
@@ -67,6 +67,7 @@ public class ToDoMainFragment extends Fragment implements View.OnClickListener {
         }
         super.setUserVisibleHint(isVisibleToUser);
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,9 +101,6 @@ public class ToDoMainFragment extends Fragment implements View.OnClickListener {
     }
 
     private void setUpListener() {
-        btnToDoProgressBar.setOnClickListener(this);
-        btnCompletedProgressBar.setOnClickListener(this);
-        btnOwnToDoProgressBar.setOnClickListener(this);
     }
 
     @Override

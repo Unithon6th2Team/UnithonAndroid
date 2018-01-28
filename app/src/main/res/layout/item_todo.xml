@@ -116,7 +116,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/imgBtn_owner"
                     android:layout_width="36dp"
                     android:layout_height="32dp"
@@ -132,7 +132,7 @@
                     android:layout_weight="1"
                     android:src="#E6E6E6" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/imgBtn_target"
                     android:layout_width="36dp"
                     android:layout_height="32dp"

@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UnithonAndroid.iml" filepath="$PROJECT_DIR$/UnithonAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UnithonAndroid.iml" filepath="$PROJECT_DIR$/UnithonAndroid.iml" />
+      <module fileurl="file://D:\0_School_Hannam\UnithonAndroid\UnithonAndroid.iml" filepath="D:\0_School_Hannam\UnithonAndroid\UnithonAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\0_School_Hannam\UnithonAndroid\app\app.iml" filepath="D:\0_School_Hannam\UnithonAndroid\app\app.iml" />
     </modules>
   </component>
 </project>
