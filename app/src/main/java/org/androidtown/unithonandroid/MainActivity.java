@@ -26,17 +26,18 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ImageView> under = new ArrayList<ImageView>();
     ArrayList<int[]> color = new ArrayList<int[]>();
     ArrayList<Integer> resid = new ArrayList<Integer>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewP = (ViewPager)findViewById(R.id.viewPager);
-        tab_home = (ImageView)findViewById(R.id.tabHome);
-        tab_todo = (ImageView)findViewById(R.id.tabTodo);
-        tab_chat = (ImageView)findViewById(R.id.tabChat);
-        under_home = (ImageView)findViewById(R.id.underHome);
-        under_todo = (ImageView)findViewById(R.id.underTodo);
-        under_chat = (ImageView)findViewById(R.id.underChat);
+        viewP = (ViewPager) findViewById(R.id.viewPager);
+        tab_home = (ImageView) findViewById(R.id.tabHome);
+        tab_todo = (ImageView) findViewById(R.id.tabTodo);
+        tab_chat = (ImageView) findViewById(R.id.tabChat);
+        under_home = (ImageView) findViewById(R.id.underHome);
+        under_todo = (ImageView) findViewById(R.id.underTodo);
+        under_chat = (ImageView) findViewById(R.id.underChat);
         setSrc();
         adapter = new pagerAdapter(getSupportFragmentManager());
 
@@ -45,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     View.OnClickListener movePageListener = new View.OnClickListener() {
-        public void onClick(View v){
-            int tag = (int)v.getTag();
+        public void onClick(View v) {
+            int tag = (int) v.getTag();
             viewP.setCurrentItem(tag);
         }
     };
 
-    private void setSrc(){
+    private void setSrc() {
         tab.add(tab_home);
         tab.add(tab_todo);
         tab.add(tab_chat);
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         resid.add(R.mipmap.icon_navi_home);
         resid.add(R.mipmap.icon_navi_todo);
         resid.add(R.mipmap.icon_navi_chat);
-        TabTodo.setArr(tab, under, color, resid);
+        ToDoMainFragment.setArr(tab, under, color, resid);
 
         tab = new ArrayList<ImageView>();
         under = new ArrayList<ImageView>();
@@ -110,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
 
         public Fragment getItem(int position) {
             setSrc();
-            switch(position) {
-                case 0 :
+            switch (position) {
+                case 0:
                     return new TabHome();
-                case 1 :
+                case 1:
                     return new ToDoMainFragment();
-                case 2 :
+                case 2:
                     return new TabChat();
                 default:
                     return null;
