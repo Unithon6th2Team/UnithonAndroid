@@ -95,7 +95,7 @@
                 android:layout_width="25dp"
                 android:layout_height="17dp"
                 android:layout_marginLeft="11dp"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:letterSpacing="-0.6"
                 android:text="날짜"
                 android:textSize="13sp" />
@@ -123,14 +123,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="83dp"
                 android:allowUndo="true"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:hint="2018.01.20(토)" />
 
             <TextView
                 android:id="@+id/tv_start_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:hint="오후 2:00" />
         </LinearLayout>
 
@@ -145,7 +145,7 @@
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="64dp"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:letterSpacing="-0.6"
                 android:text="종료"
                 android:textSize="13sp" />
@@ -154,7 +154,7 @@
                 android:id="@+id/tv_end_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:layout_marginLeft="83dp"
                 android:hint="2018.01.20(토)" />
 
@@ -162,7 +162,7 @@
                 android:id="@+id/tv_end_time"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:layout_gravity="right"
                 android:hint="오후 2:00" />
         </LinearLayout>
@@ -191,7 +191,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
-            android:fontFamily="@font/yoongothic740"
+            android:fontFamily="@font/yoongothic_740"
             android:hint="보상을 작성하세요"
             android:inputType="textPersonName"
             android:textSize="14sp" />
@@ -217,7 +217,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="담당자"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -225,7 +225,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/yoongothic740"
+                android:fontFamily="@font/yoongothic_740"
                 android:layout_marginLeft="4dp"
                 android:layout_weight="0"
                 android:text="선택" />

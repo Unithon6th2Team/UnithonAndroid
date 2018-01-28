@@ -1,9 +1,9 @@
 package org.androidtown.unithonandroid.Fragment;
 
 
-import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -110,7 +110,7 @@ public class ToDoMainFragment extends Fragment implements View.OnClickListener {
 
                 Gson gson = new Gson();
                 apiResBodies = gson.fromJson(temp, ApiResBody[].class);
-                Log.e("api", String.valueOf(apiResBodies));
+                Log.e("api", String.valueOf(apiResBodies.length));
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
